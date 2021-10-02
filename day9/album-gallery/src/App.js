@@ -5,6 +5,7 @@ import AddAlbum from "./components/Albums/AddAlbum";
 import Albums from "./components/Albums/Albums";
 import albumList from "./components/Albums/AlbumData";
 import Navbar from "./components/Navbar";
+import Songs from "./components/Songs/Songs";
 
 class App extends Component {
   state = {
@@ -66,6 +67,9 @@ class App extends Component {
                   </div>
                 </div>
               </div>
+            </Route>
+            <Route exact path="/albums/:id">
+              <Songs albums={this.state.albums} />
             </Route>
           </Switch>
         </BrowserRouter>
