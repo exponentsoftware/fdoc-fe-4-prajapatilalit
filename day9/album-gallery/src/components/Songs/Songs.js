@@ -14,7 +14,7 @@ const Songs = ({ albums }) => {
   return (
     <div>
       {
-        <div>
+        <div className="album">
           <img
             src={albumItem.albumCover}
             alt="Album-cover"
