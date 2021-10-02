@@ -27,18 +27,38 @@ const Songs = ({ albums }) => {
 
       <div>
         <table>
-          <tr>
-            <th>title</th>
-            <th>videoCount</th>
-            <th>duration</th>
-          </tr>
-          {songs.map((song) => (
+          <thead>
             <tr>
-              <td>{song.sname}</td>
-              <td>{song.videoCount}</td>
-              <td>{song.duration}</td>
+              <th>#</th>
+              <th>TITLE</th>
+              <th>PLAYS</th>
+              <th>ALBUM</th>
+              <th>Duration</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {songs.map((song) => (
+              <tr>
+                <ol>
+                  <li>
+                    <td>
+                      <div>
+                        <img src={song.simage} alt="song-cover" />
+                      </div>
+
+                      <div>
+                        <h3>{song.sname}</h3>
+                        <p>{song.artist}</p>
+                      </div>
+                    </td>
+                    <td>{song.tdlays}</td>
+                    <td>{song.albumName}</td>
+                    <td>{song.duration}</td>
+                  </li>
+                </ol>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
