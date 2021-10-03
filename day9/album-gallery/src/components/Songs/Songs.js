@@ -28,7 +28,7 @@ const Songs = ({ albums }) => {
       <div>
         <table>
           <thead>
-            <tr>
+            <tr className="table-hading">
               <th>#</th>
               <th>TITLE</th>
               <th>PLAYS</th>
@@ -37,25 +37,24 @@ const Songs = ({ albums }) => {
             </tr>
           </thead>
           <tbody>
-            {songs.map((song) => (
-              <tr>
-                <ol>
-                  <li>
-                    <td>
-                      <div>
-                        <img src={song.simage} alt="song-cover" />
-                      </div>
+            {songs.map((song, index) => (
+              <tr className="table-body">
+                <td>{index}</td>
+                <td>
+                  <div className="song-item">
+                    <div>
+                      <img src={song.simage} alt="song-cover" />
+                    </div>
 
-                      <div>
-                        <h3>{song.sname}</h3>
-                        <p>{song.artist}</p>
-                      </div>
-                    </td>
-                    <td>{song.tdlays}</td>
-                    <td>{song.albumName}</td>
-                    <td>{song.duration}</td>
-                  </li>
-                </ol>
+                    <div>
+                      <h4>{song.sname}</h4>
+                      <p>{song.artist}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>{song.plays}</td>
+                <td>{song.albumName}</td>
+                <td>{song.duration}</td>
               </tr>
             ))}
           </tbody>

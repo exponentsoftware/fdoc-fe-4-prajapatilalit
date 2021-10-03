@@ -279,3 +279,20 @@ body {
     width: 90%;
   }
 }
+
+/* songs */
+table {
+  padding: 40px;
+}
+.table-heading th {
+  padding: 10px;
+  margin-right: 20px;
+}
+.song-item {
+  display: flex;
+  justify-content: space-between;
+}
+.song-item img {
+  width: 60px;
+  height: 60px;
+}
